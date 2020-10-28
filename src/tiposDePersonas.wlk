@@ -1,33 +1,42 @@
 object don {
- 
- method esElegante(elMismo){
+  method esElegante(elMismo){
  		return true
  	}
+  method hacerTrabajo(persona, elMismo){
+   var unSub = elMismo.unSub()
+   unSub.hacerTrabajo(persona)	
+   unSub.hacerTrabajo(persona)		
+ }
 	
 }
 
-class Subjefe{
+object subjefe{
 	
-	var subordinados 
-	 	
- 	method esElegante(elMismo){
- 		return subordinados.tieneArmaSutil()
+	method esElegante(elMismo){
+		const unSub = elMismo.unSub()
+ 		return unSub.tieneArmaSutil()
  	}
- 	method atacar(unaFamilia){
- 		var miembroMasPeligroso = unaFamilia.peligroso()
- 		self.matar(miembroMasPeligroso)
- 	}
- 	
- 	method matar(miembroMasPeligroso){
+ 	 	
+ 	method hacerTrabajo(persona, elMismo){
+ 		const unArma = elMismo.unArma()
+ 		unArma.serUtlizada(persona) 
  		
  	}
 }
 
-class Soldado{
-		 
+
+object soldado{
+	
  	method esElegante(elMismo){
  		return elMismo.tieneArmaSutil()
  	}
+ 	
+ 	method hacerTrabajo(persona, elMismo){
+ 		const primerArma =  elMismo.primerArma()
+ 		primerArma.serUtlizada(persona)
+ 	}
+ 	
+ 	
  	
  	
 }

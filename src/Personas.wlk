@@ -7,9 +7,13 @@ class Integrante{
 	var lealtad
 	var clase // don suborfinado , soldado // esta clase tambien contienelas armas
 	var subordinados 
-	method estaVivo(){
-		return estado == "vivo"
+	var familia
+	
 	}
+	method estaVivo(){
+		return (estado == "vivo")
+	}
+	
 	 method cantidadDeArmas(){
  		return armas.size()
  	}
@@ -73,6 +77,7 @@ class Integrante{
  	method convertirseEnDon(){
  		clase = don
  	}
+ 	
  	
  	
  	
